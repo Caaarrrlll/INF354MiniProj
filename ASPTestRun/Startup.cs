@@ -25,7 +25,6 @@ namespace ASPTestRun
         {
             services.AddMvc();
             services.AddDbContext<SchoolContext>(options => {
-                // options.UseSqlServer(Configuration.GetConnectionString("LocalDB"));
                 options.UseMySQL(Configuration.GetConnectionString("MySQL"));
             });
         }
